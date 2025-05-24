@@ -48,4 +48,19 @@
 ```
 $nmap -n -sS -vv -Pn -pT:[ポート番号] -oA [ファイル名] [ターゲットIP]
 ```
+![wiresharlでnmap通信の様子を確認したときのもの](./nmap.png)
+
+
+### Nmapスキャン結果のSTATE
+- open: openポートとして反応があった
+- closed: closedポートとして反応があった
+- filterd: 反応がない
+- unfilterd: 反応があったがopenかclosedか不明
+- open|filterd: 反応がなかったが、openだと思われる
+- closed|filterd: 反応がなかったが、Closedだと思われる
+
+### サービス調査
+- TCPやUDPのポートで待ち受けているサービスの種類やバージョンを調査
+- サービスが返す情報から判断
+- 特定のパターンデータを投げつけ、その反応を見て判断
 
